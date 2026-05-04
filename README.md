@@ -6,52 +6,62 @@
 
 ---
 
-## 📌 Overview
-Financial fraud detection is a critical challenge in modern digital economies. This project presents a **machine learning-based approach** for detecting fraudulent financial transactions using a **Logistic Regression model**.
+# 💳 Machine Learning-Based Fraud Detection System
 
-The system is designed as a **preliminary research prototype**, demonstrating how supervised learning techniques can identify patterns indicative of fraud.
+## 📌 Project Overview
+This project presents a machine learning-based fraud detection system designed to identify fraudulent financial transactions using real-world credit card transaction data. The system applies data balancing techniques and multiple classification algorithms to improve detection performance in highly imbalanced datasets.
 
----
-
-## 🎯 Objectives
-- Develop a basic fraud detection model using machine learning  
-- Evaluate model performance using standard classification metrics  
-- Visualize results using confusion matrix and performance charts  
-- Provide a reproducible pipeline for academic and research purposes  
+The solution is built as a deployable AI application using **Streamlit**, making it accessible as an interactive web app.
 
 ---
 
-## 🧠 Model Description
-This project uses:
-
-- **Algorithm:** Logistic Regression  
-- **Task:** Binary Classification  
-- **Input Feature:** Transaction Amount  
-- **Output:**  
-  - `0` → Legitimate Transaction  
-  - `1` → Fraudulent Transaction  
+## 👤 Author
+**Akpojotor Emmanuel Oghenechovwe**  
+Department of Computing  
+National Open University of Nigeria (NOUN)  
+Email: nou224068313@noun.edu.ng  
 
 ---
 
-## 📊 Evaluation Metrics
-The model is evaluated using:
-
-- Accuracy  
-- Precision  
-- Recall  
-- F1-score  
-- Confusion Matrix  
-
-These metrics provide insight into the model’s ability to correctly identify fraudulent transactions while minimizing false positives.
+## 🚀 Live Demo (After Deployment)
+👉 HuggingFace Spaces: *(to be added after deployment)*  
+👉 GitHub Repository: *(current repo link)*  
 
 ---
 
-## 📈 Visualizations
-The project generates:
+## 📊 Dataset
+The dataset used is the **Credit Card Fraud Detection dataset**, which contains anonymized transaction data from European cardholders.
 
-- 📉 Confusion Matrix (Fraud vs Legitimate)
-- 📊 Performance Metrics Chart (Precision, Recall, F1-score)
+- Total records: 284,807 transactions  
+- Fraud cases: ~0.17% (highly imbalanced dataset)  
+- Features: PCA-transformed variables (V1–V28), Amount, Class  
+
+Source:
+- Kaggle Credit Card Fraud Dataset
 
 ---
 
-## 📁 Project Structure
+## ⚙️ Methodology
+
+### 1. Data Preprocessing
+- Standard scaling applied to `Amount`
+- Removed `Time` feature (if present)
+- Feature separation into X (inputs) and y (target)
+
+### 2. Class Imbalance Handling
+- SMOTE (Synthetic Minority Over-sampling Technique)
+- Balanced fraud vs non-fraud distribution
+
+### 3. Machine Learning Models
+The following models were implemented:
+
+- Logistic Regression
+- Random Forest Classifier
+- XGBoost Classifier (Best performing model)
+
+---
+
+## 🧠 Model Training Pipeline
+
+```python
+StandardScaler → SMOTE → Train-Test Split → Model Training → Evaluation
