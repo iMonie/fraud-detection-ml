@@ -1,7 +1,7 @@
-streamlit
-scikit-learn
+gradio
 numpy
-pandas
 joblib
+scikit-learn
 xgboost
-imblearn
+imbalanced-learn
+pandas
