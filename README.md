@@ -23,9 +23,9 @@ Email: nou224068313@noun.edu.ng
 
 ---
 
-## 🚀 Live Demo (After Deployment)
-👉 HuggingFace Spaces: *(to be added after deployment)*  
-👉 GitHub Repository: *(current repo link)*  
+## 🚀 Live Demo 
+👉 HuggingFace Spaces: *(https://huggingface.co/spaces/Akpoj/fraud-detection-ai)*  
+👉 GitHub Repository: *((https://github.com/iMonie/fraud-detection-ml/blob/main/fraud-detection-ml-project.ipynb))*  
 
 ---
 
